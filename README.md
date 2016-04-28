@@ -14,10 +14,10 @@ PLease Replace these code in (Note this example only for comments, you can repla
 [your joomla folder]/components/com_k2/views/item/view.html.php<br>
 <br>
 <b>FIND (Approx. Line: 182) :</b>
-	if($params->get('recaptchaV2')) { <br>
+	if($params->get('recaptchaV2')) { 
 		$document->addScript('https://www.google.com/recaptcha/api.js?onload=onK2RecachaLoaded&render=explicit');
-		<br>$js = 'function <br>onK2RecaptchaLoaded(){grecaptcha.render("recaptcha",{"sitekey""'.$item->params->get('recaptcha_publickey').'"});}';
-	<br>	$document->addScriptDeclaration($js);	
+		$js = 'function onK2RecaptchaLoaded(){grecaptcha.render("recaptcha",{"sitekey""'.$item->params->get('recaptcha_publickey').'"});}';
+		$document->addScriptDeclaration($js);	
 	$this->recaptchaClass = 'k2-recaptcha-v2';
 	}
 
