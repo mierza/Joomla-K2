@@ -38,4 +38,4 @@ PLease Replace these code in (Note this example only for comments, you can repla
 <b>NOTE :<br>
 YOU CAN USED FOR ANOTHER FILE LIKE : [your joomla folder]/plugins/system/k2/k2.php<br></b>
 
-<b><p color="#FF0000">You can download the PHP file (ONLY FOR [your joomla folder]/components/com_k2/views/item/view.html.php).</p></b>
+<b><p style="color:#FF0000">You can download the PHP file (ONLY FOR [your joomla folder]/components/com_k2/views/item/view.html.php).</p></b>
