@@ -13,7 +13,7 @@ After accept comment & reload page >> reCAPTCHA not will shown<br>
 PLease Replace these code in (Note this example only for comments, you can replace for other) :<br>
 [your joomla folder]/components/com_k2/views/item/view.html.php<br>
 <br>
-<b>FIND :</b>
+<b>FIND :(Approx. Line: 182)</b>
 	if($params->get('recaptchaV2')) { <br>
 		$document->addScript('https://www.google.com/recaptcha/api.js?onload=onK2RecachaLoaded&render=explicit');
 		<br>$js = 'function <br>onK2RecaptchaLoaded(){grecaptcha.render("recaptcha",{"sitekey""'.$item->params->get('recaptcha_publickey').'"});}';
@@ -23,16 +23,17 @@ PLease Replace these code in (Note this example only for comments, you can repla
 
 <br><br>
 <b>REPLACE WITH :</b><br>
-  	if($params->get('recaptchaV2')) {
-	<br>	$document->addScript('https://www.google.com/recaptcha/api.js?hl=' . JFactory::getLanguage()->getTag() . '&onload=onK2RecaptchaLoaded&render=explicit');
-	<br>	$js = 'function onK2RecaptchaLoaded(){grecaptcha.render("recaptcha", {"sitekey" : <br>"'.$item->params->get('recaptcha_public_key').'"});}
-	<br>	$K2(window).load(function() {
-	<br>		onK2RecaptchaLoaded();
-	<br>	});
-	<br>	';
-	<br>	$document->addScriptDeclaration($js);
-	<br>	$this->recaptchaClass = 'k2-recaptcha-v2';
-	}
+  						if($params->get('recaptchaV2')) {
+							$document->addScript('https://www.google.com/recaptcha/api.js?hl=' . JFactory::getLanguage()
+						->getTag() . '&onload=onK2RecaptchaLoaded&render=explicit');
+							$js = 'function onK2RecaptchaLoaded(){grecaptcha.render("recaptcha", {"sitekey" : "'.$item->params->get('recaptcha_public_key').'"});}
+							$K2(window).load(function() {
+								onK2RecaptchaLoaded();
+							});
+							';
+							$document->addScriptDeclaration($js);
+							$this->recaptchaClass = 'k2-recaptcha-v2';
+						}
 <br><br>
 <b>NOTE :<br>
 YOU CAN USED FOR ANOTHER FILE LIKE : [your joomla folder]/plugins/system/k2/k2.php<br></b>
