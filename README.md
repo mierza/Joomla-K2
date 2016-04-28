@@ -13,7 +13,7 @@ After accept comment & reload page >> reCAPTCHA not will shown<br>
 PLease Replace these code in (Note this example only for comments, you can replace for other) :<br>
 [your joomla folder]/components/com_k2/views/item/view.html.php<br>
 <br>
-<b>FIND (Approx. Line: 182) :</b>
+<b>FIND (Approx. Line: 182) :</b><br>
 	if($params->get('recaptchaV2')) { 
 		$document->addScript('https://www.google.com/recaptcha/api.js?onload=onK2RecachaLoaded&render=explicit');
 		$js = 'function onK2RecaptchaLoaded(){grecaptcha.render("recaptcha",{"sitekey""'.$item->params->get('recaptcha_publickey').'"});}';
