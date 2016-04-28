@@ -16,24 +16,23 @@ PLease Replace these code in (Note this example only for comments, you can repla
 <b>FIND :</b>
 	if($params->get('recaptchaV2')) {<br>
 		$document->addScript('https://www.google.com/recaptcha/api.js?onload=onK2RecachaLoaded&render=explicit');
-		$js = 'function onK2RecaptchaLoaded(){grecaptcha.render("recaptcha",{"sitekey""'.$item->params->get('recaptcha_publickey').'"});}';
-							$document->addScriptDeclaration($js);
-							$this->recaptchaClass = 'k2-recaptcha-v2';
-						}
+		<br>$js = 'function <br>onK2RecaptchaLoaded(){grecaptcha.render("recaptcha",{"sitekey""'.$item->params->get('recaptcha_publickey').'"});}';
+	<br>	$document->addScriptDeclaration($js);	
+<br>		$this->recaptchaClass = 'k2-recaptcha-v2';
+	}
 
 <br><br>
-<b>REPLACE WITH :</b>
-  						if($params->get('recaptchaV2')) {
-							$document->addScript('https://www.google.com/recaptcha/api.js?hl=' . JFactory::getLanguage()
-						->getTag() . '&onload=onK2RecaptchaLoaded&render=explicit');
-							$js = 'function onK2RecaptchaLoaded(){grecaptcha.render("recaptcha", {"sitekey" : "'.$item->params->get('recaptcha_public_key').'"});}
-							$K2(window).load(function() {
-								onK2RecaptchaLoaded();
-							});
-							';
-							$document->addScriptDeclaration($js);
-							$this->recaptchaClass = 'k2-recaptcha-v2';
-						}
+<b>REPLACE WITH :</b><br>
+  	if($params->get('recaptchaV2')) {
+	<br>	$document->addScript('https://www.google.com/recaptcha/api.js?hl=' . JFactory::getLanguage()->getTag() . '&onload=onK2RecaptchaLoaded&render=explicit');
+	<br>	$js = 'function onK2RecaptchaLoaded(){grecaptcha.render("recaptcha", {"sitekey" : <br>"'.$item->params->get('recaptcha_public_key').'"});}
+	<br>	$K2(window).load(function() {
+	<br>		onK2RecaptchaLoaded();
+	<br>	});
+	<br>	';
+	<br>	$document->addScriptDeclaration($js);
+	<br>	$this->recaptchaClass = 'k2-recaptcha-v2';
+	}
 <br><br>
 <b>NOTE :<br>
 YOU CAN USED FOR ANOTHER FILE LIKE : [your joomla folder]/plugins/system/k2/k2.php<br></b>
