@@ -38,4 +38,4 @@ REPLACE WITH :
 NOTE :
 YOU CAN USED FOR ANOTHER FILE LIKE : [your joomla folder]/plugins/system/k2/k2.php
 
-You can download the PHP file from link (ONLY FOR [your joomla folder]/components/com_k2/views/item/view.html.php):
+You can download the PHP file (ONLY FOR [your joomla folder]/components/com_k2/views/item/view.html.php).
