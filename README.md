@@ -1,5 +1,5 @@
-# Joomla-K2
-This is an Fixed issue of Joomla K2 Component and some improve it<br>
+<b># Joomla-K2
+This is an Fixed issue of Joomla K2 Component and some improve it<br></b>
 //By Abdulaziz Mierza<br>
 //-------------------------------------------------------------------------//<br>
 1-Fixed issue with  Google reCAPTCHA v2 (28-4-2016)<br>
@@ -13,7 +13,7 @@ After accept comment & reload page >> reCAPTCHA not will shown<br>
 PLease Replace these code in (Note this example only for comments, you can replace for other) :<br>
 [your joomla folder]/components/com_k2/views/item/view.html.php<br>
 <br>
-FIND :
+<b>FIND :</b>
 						if($params->get('recaptchaV2')) {
 							$document->addScript('https://www.google.com/recaptcha/api.js?onload=onK2RecaptchaLoaded&render=explicit');
 							$js = 'function onK2RecaptchaLoaded(){grecaptcha.render("recaptcha", {"sitekey" : "'.$item->params->get('recaptcha_public_key').'"});}';
@@ -22,7 +22,7 @@ FIND :
 						}
 
 <br><br>
-REPLACE WITH :
+<b>REPLACE WITH :</b>
   						if($params->get('recaptchaV2')) {
 							$document->addScript('https://www.google.com/recaptcha/api.js?hl=' . JFactory::getLanguage()
 						->getTag() . '&onload=onK2RecaptchaLoaded&render=explicit');
@@ -38,4 +38,4 @@ REPLACE WITH :
 <b>NOTE :<br>
 YOU CAN USED FOR ANOTHER FILE LIKE : [your joomla folder]/plugins/system/k2/k2.php<br></b>
 <br>
-You can download the PHP file (ONLY FOR [your joomla folder]/components/com_k2/views/item/view.html.php).
+<b><font color="#FF0000">You can download the PHP file (ONLY FOR [your joomla folder]/components/com_k2/views/item/view.html.php).</font></b>
