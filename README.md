@@ -14,9 +14,9 @@ PLease Replace these code in (Note this example only for comments, you can repla
 [your joomla folder]/components/com_k2/views/item/view.html.php<br>
 <br>
 <b>FIND :</b>
-						if($params->get('recaptchaV2')) {
-							$document->addScript('https://www.google.com/recaptcha/api.js?onload=onK2RecaptchaLoaded&render=explicit');
-							$js = 'function onK2RecaptchaLoaded(){grecaptcha.render("recaptcha", {"sitekey" : "'.$item->params->get('recaptcha_public_key').'"});}';
+	if($params->get('recaptchaV2')) {<br>
+		$document->addScript('https://www.google.com/recaptcha/api.js?onload=onK2RecachaLoaded&render=explicit');
+		$js = 'function onK2RecaptchaLoaded(){grecaptcha.render("recaptcha",{"sitekey""'.$item->params->get('recaptcha_publickey').'"});}';
 							$document->addScriptDeclaration($js);
 							$this->recaptchaClass = 'k2-recaptcha-v2';
 						}
@@ -38,4 +38,4 @@ PLease Replace these code in (Note this example only for comments, you can repla
 <b>NOTE :<br>
 YOU CAN USED FOR ANOTHER FILE LIKE : [your joomla folder]/plugins/system/k2/k2.php<br></b>
 
-<b><p style="color:#FF0000">You can download the PHP file (ONLY FOR [your joomla folder]/components/com_k2/views/item/view.html.php).</p></b>
+<b>You can download the PHP file (ONLY FOR [your joomla folder]/components/com_k2/views/item/view.html.php).</b>
